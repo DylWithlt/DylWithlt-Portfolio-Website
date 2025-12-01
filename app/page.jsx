@@ -5,6 +5,8 @@ import ContactLinks from "../components/ContactLinks";
 import AboutMe from "../components/AboutMe";
 import WIP from "../components/WIP";
 
+import MagicalBackground from "../components/magical-background/MagicalBackground";
+
 const employers = [
   {
     company: "Sam Dev Studios",

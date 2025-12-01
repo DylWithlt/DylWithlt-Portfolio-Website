@@ -14,9 +14,9 @@ export default function Packages({ plans = [] }) {
                   <li key={idx}>• {f}</li>
                 ))}
               </ul>
-              <button className="mt-6 w-full py-2 rounded bg-black text-white">
+              {/* <button className="mt-6 w-full py-2 rounded bg-black text-white">
                 Buy
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

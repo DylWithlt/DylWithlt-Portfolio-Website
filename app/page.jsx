@@ -78,7 +78,7 @@ export default function Page() {
     "Thanks for visiting my website. I'm a 26-year-old developer (last updated 12/1/2025) who’s been building on Roblox since 2015 and playing since 2008. I graduated with a degree in Computer Science in 2023, and worked as a tutor for the school until I finished my program.",
     "Over the years, I've worked with a lot of talented people and tried to give back to the community when I can—mostly by teaching others I've met along the way. Some of them have gone on to do awesome things or even turn development into a full-time career.",
     "The best way to reach me is on Discord.",
-    'Remember to include <b>"unga bunga"</b> in your DM or i\'ll ignore you.',
+    'Remember to include "unga bunga" in your DM or i\'ll ignore you.',
   ];
 
   return (

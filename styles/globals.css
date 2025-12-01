@@ -1,0 +1,116 @@
+/* styles/globals.css */
+
+/* import a clean system-ish font (or swap to your chosen Google font) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+@import "tailwindcss";
+
+
+
+/* Simple design tokens */
+:root {
+    --bg-1: #0f172a;
+    /* deep navy */
+    --bg-2: #071032;
+    /* darker gradient stop */
+    --muted: #94a3b8;
+    /* muted text */
+    --accent: #7c3aed;
+    /* purple accent */
+    --glass: rgba(255, 255, 255, 0.06);
+    --glass-2: rgba(255, 255, 255, 0.03);
+}
+
+/* Base tweaks */
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #e6eef8;
+}
+
+/* Page container to center content and keep nice max width */
+.container {
+    @apply mx-auto px-6;
+    max-width: 1200px;
+}
+
+/* Card: translucent glass with subtle border + shadow */
+.glass-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+}
+
+/* Accent button */
+.btn-accent {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 font-semibold shadow-sm transition transform;
+    background: linear-gradient(90deg, rgba(124, 58, 237, 1) 0%, rgba(99, 102, 241, 1) 100%);
+    color: white;
+}
+
+.btn-accent:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.12);
+}
+
+.btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 border border-white/10 text-sm transition;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateY(-2px);
+}
+
+/* Headline decorate */
+.lead-underline {
+    position: relative;
+}
+
+.lead-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 64px;
+    height: 4px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, var(--accent), rgba(99, 102, 241, 0.9));
+    opacity: 0.95;
+}
+
+/* Project card image placeholder (if using next/image) */
+.project-thumb {
+    @apply rounded-md overflow-hidden h-44 w-full relative;
+}
+
+/* Small utility tweaks for text */
+.muted {
+    color: var(--muted);
+}
+
+/* Responsive: more breathing on large screens */
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .lead-large {
+        font-size: 3.6rem;
+        line-height: 1.02;
+    }
+}
+
+/* Focus outline for accessibility */
+:focus {
+    outline: 3px solid rgba(124, 58, 237, 0.18);
+    outline-offset: 2px;
+}
